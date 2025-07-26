@@ -580,3 +580,27 @@ Require stack:
  ✓ Ready in 1340ms
    Reload env: .env.local
    Reload env: .env.local
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1895ms (1311 modules)
+ GET /dashboard 200 in 2157ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_error in 2.1s (1611 modules)
+ GET /login 200 in 1478ms
+ GET /env 404 in 2259ms
+ GET /login 200 in 7ms
+ GET /login 200 in 6ms
+ GET /login 200 in 6ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 2211ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 488ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 214ms
+ GET /dashboard 200 in 428ms
+ GET /env 404 in 25ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 215ms
+ ⨯ A conflicting public file and page file was found for path /favicon.ico https://nextjs.org/docs/messages/conflicting-public-file-page
+ GET /favicon.ico 500 in 228ms
+ ✓ Compiled /feedback in 412ms (1526 modules)
+ GET /feedback 200 in 534ms
