@@ -1,0 +1,582 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.4.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.248:3000
+
+ ✓ Starting...
+ ✓ Ready in 1491ms
+ ○ Compiling /reports ...
+ ✓ Compiled /reports in 616ms (652 modules)
+ GET /reports 200 in 823ms
+ GET /reports 200 in 56ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 535ms (657 modules)
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 1502ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 1429ms
+ ✓ Compiled in 1770ms (643 modules)
+ GET /reports 200 in 50ms
+ ✓ Compiled /test-reports in 217ms (650 modules)
+ GET /test-reports 200 in 280ms
+ ✓ Compiled in 231ms (664 modules)
+ GET /reports 200 in 28ms
+ GET /reports 200 in 84ms
+ GET /env 404 in 96ms
+ GET /reports 200 in 703ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 47ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 31ms
+ GET /reports 200 in 134ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 34ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 23ms
+ GET /reports 200 in 246ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 1155ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 67ms
+ ✓ Compiled /chat in 279ms (652 modules)
+ GET /chat 200 in 329ms
+ ○ Compiling /feedback ...
+ ✓ Compiled /feedback in 544ms (1323 modules)
+ GET /feedback 200 in 656ms
+ ✓ Compiled /dashboard in 349ms (1331 modules)
+ GET /dashboard 200 in 411ms
+ GET /feedback 200 in 29ms
+ ✓ Compiled /feedback/[id] in 218ms (1338 modules)
+ GET /feedback/rec0ZbJG6u3jZSbrx 200 in 592ms
+ GET /feedback 200 in 209ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1364ms (1343 modules)
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 1683ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 956ms
+ GET /feedback 200 in 145ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 402ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 154ms
+ GET /feedback/rec02m5zmVRO9Su8T 200 in 77ms
+ GET /feedback 200 in 75ms
+ ✓ Compiled in 307ms (594 modules)
+ GET /feedback 200 in 16ms
+ GET /feedback 200 in 41ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1126ms (1343 modules)
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 1289ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+ GET /env 404 in 658ms
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /feedback 200 in 99ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 771ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 37ms
+ GET /feedback/rec02m5zmVRO9Su8T 200 in 50ms
+ GET /feedback 200 in 43ms
+ GET /feedback/rec03wBkOaK1xbHm2 200 in 46ms
+ GET /feedback 200 in 100ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 825ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 97ms
+ GET /feedback 200 in 196ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 563ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 176ms
+ GET /feedback 200 in 128ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 136ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 150ms
+ GET /dashboard 200 in 55ms
+ GET /dashboard 200 in 86ms
+ GET /env 404 in 244ms
+ GET /feedback/recjlepfKQt8imMTW?from=dashboard 200 in 45ms
+ GET /dashboard 200 in 53ms
+ GET /feedback/rec1P4IJXEXdwpVG1?from=dashboard 200 in 42ms
+ GET /dashboard 200 in 39ms
+ GET /dashboard 200 in 22ms
+ GET /feedback 200 in 9ms
+ ✓ Compiled in 595ms (1352 modules)
+ GET /feedback 200 in 101ms
+ ✓ Compiled in 274ms (1352 modules)
+ GET /feedback 200 in 58ms
+ ✓ Compiled in 256ms (1352 modules)
+ GET /feedback 200 in 29ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 164ms (1352 modules)
+ GET /feedback 200 in 389ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 982ms (1343 modules)
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 1262ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 606ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 283ms (1357 modules)
+ GET /feedback 200 in 89ms
+ GET /env 404 in 91ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 322ms (1357 modules)
+ GET /feedback 200 in 168ms
+ GET /env 404 in 221ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 369ms (1357 modules)
+ GET /feedback 200 in 214ms
+ GET /env 404 in 72ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 268ms (1357 modules)
+ GET /feedback 200 in 239ms
+ GET /env 404 in 79ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 237ms (1357 modules)
+ GET /feedback 200 in 133ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 357ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 45ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 226ms (1357 modules)
+ GET /feedback 200 in 75ms
+ GET /env 404 in 245ms
+ ✓ Compiled in 231ms (1357 modules)
+ GET /feedback 200 in 140ms
+ GET /env 404 in 79ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 275ms (1357 modules)
+ GET /feedback 200 in 234ms
+ GET /env 404 in 109ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 293ms (1357 modules)
+ GET /feedback 200 in 178ms
+ GET /env 404 in 101ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 245ms (1357 modules)
+ GET /feedback 200 in 76ms
+ GET /env 404 in 50ms
+ GET /feedback 200 in 125ms
+ GET /env 404 in 24ms
+ ✓ Compiled in 177ms (598 modules)
+ GET /feedback 200 in 34ms
+ GET /env 404 in 68ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 264ms (1357 modules)
+ GET /feedback 200 in 260ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 36ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 231ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 231ms (1357 modules)
+ GET /feedback 200 in 77ms
+ GET /env 404 in 376ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 415ms (1357 modules)
+ GET /feedback 200 in 237ms
+ GET /env 404 in 134ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 322ms (1357 modules)
+ GET /feedback 200 in 198ms
+ GET /env 404 in 80ms
+ ✓ Compiled in 337ms (1357 modules)
+ GET /feedback 200 in 113ms
+ GET /env 404 in 179ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 390ms (1357 modules)
+ GET /feedback 200 in 271ms
+ GET /env 404 in 123ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 342ms (1357 modules)
+ GET /feedback 200 in 129ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 468ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 53ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 293ms (1357 modules)
+ GET /feedback 200 in 228ms
+ GET /env 404 in 82ms
+ GET /dashboard 200 in 71ms
+ GET /feedback 200 in 61ms
+ ✓ Compiled in 292ms (1357 modules)
+ GET /feedback 200 in 38ms
+ GET /feedback 200 in 90ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 26ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 51ms
+ ✓ Compiled in 327ms (1357 modules)
+ GET /feedback 200 in 121ms
+ ✓ Compiled in 372ms (1357 modules)
+ GET /feedback 200 in 46ms
+ GET /feedback 200 in 149ms
+ GET /env 404 in 57ms
+ ✓ Compiled in 449ms (1357 modules)
+ GET /feedback 200 in 55ms
+ GET /chat 200 in 62ms
+ GET /feedback 200 in 25ms
+ GET /dashboard 200 in 23ms
+ GET /reports 200 in 71ms
+ GET /feedback 200 in 51ms
+ GET /feedback 200 in 139ms
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 20ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 208ms
+ ✓ Compiled in 469ms (1357 modules)
+ GET /feedback 200 in 48ms
+ GET /feedback 200 in 203ms
+ GET /env 404 in 116ms
+ ✓ Compiled in 637ms (1357 modules)
+ GET /feedback 200 in 79ms
+ ✓ Compiled in 532ms (1352 modules)
+ GET /feedback 200 in 43ms
+ ✓ Compiled in 243ms (1352 modules)
+ GET /feedback 200 in 23ms
+ ✓ Compiled in 156ms (1352 modules)
+ GET /feedback 200 in 21ms
+ ✓ Compiled in 174ms (1352 modules)
+ GET /feedback 200 in 24ms
+ ✓ Compiled in 213ms (1352 modules)
+ GET /feedback 200 in 23ms
+ GET /feedback 200 in 114ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 753ms (1343 modules)
+ GET /coverwallet-logo-png_seeklogo-495575.png 404 in 834ms
+ ⨯ The requested resource isn't a valid image for /coverwallet-logo-png_seeklogo-495575.png received text/html; charset=utf-8
+[Error: The requested resource isn't a valid image.] { statusCode: 400 }
+ GET /env 404 in 267ms
+ GET /feedback/reclv4uYS0Pcp3DNO 200 in 63ms
+ GET /feedback/recIldF1upIw5AoLb 200 in 62ms
+ GET /feedback/recnUDZ8KJc9UTZjt 200 in 63ms
+ GET /feedback 200 in 265ms
+ GET /env 404 in 48ms
+ ✓ Compiled in 472ms (1357 modules)
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/app/feedback/page.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/feedback/page.js:2:7383)
+    at Object.<anonymous> (.next/server/app/feedback/page.js:2:7437) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/feedback'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 611ms (1671 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/tylerwood/voice_of_customer/frontend/.next/routes-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/tylerwood/voice_of_customer/frontend/.next/routes-manifest.json'
+}
+ GET /feedback 500 in 1413ms
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/pages/_document.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/feedback/page.js:2:7383)
+    at Object.<anonymous> (.next/server/app/feedback/page.js:2:7437) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/feedback'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/tylerwood/voice_of_customer/frontend/.next/routes-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/tylerwood/voice_of_customer/frontend/.next/routes-manifest.json'
+}
+ GET /feedback 500 in 260ms
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/pages/_document.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/feedback/page.js:2:7383)
+    at Object.<anonymous> (.next/server/app/feedback/page.js:2:7437) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/feedback'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/tylerwood/voice_of_customer/frontend/.next/routes-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/tylerwood/voice_of_customer/frontend/.next/routes-manifest.json'
+}
+ GET /feedback 500 in 242ms
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/pages/_document.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/feedback/page.js:2:7383)
+    at Object.<anonymous> (.next/server/app/feedback/page.js:2:7437) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/feedback'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/tylerwood/voice_of_customer/frontend/.next/routes-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/tylerwood/voice_of_customer/frontend/.next/routes-manifest.json'
+}
+ GET /feedback 500 in 261ms
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/pages/_document.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/_not-found/page.js:2:9749)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:2:9799) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /env 500 in 81ms
+ ✓ Compiled in 215ms (1685 modules)
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/app/_not-found/page.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/_not-found/page.js:2:9749)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:2:9799) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/webpack/055b11a8471951bb.webpack.hot-update.json 500 in 20ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/app/_not-found/page.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/feedback/page.js:2:7383)
+    at Object.<anonymous> (.next/server/app/feedback/page.js:2:7437) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/feedback'
+}
+ ⨯ Error: Cannot find module './548.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/app/_not-found/page.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/pages/_document.js:1:325)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /feedback 500 in 33ms
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/app/_not-found/page.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/_not-found/page.js:2:9749)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:2:9799) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/app/_not-found/page.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/_not-found/page.js:2:9749)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:2:9799) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/app/_not-found/page.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/_not-found/page.js:2:9749)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:2:9799) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/chunks/fallback/webpack.js 500 in 452ms
+ GET /_next/static/chunks/fallback/main.js 500 in 452ms
+ GET /_next/static/chunks/fallback/react-refresh.js 500 in 451ms
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/app/_not-found/page.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/_not-found/page.js:2:9749)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:2:9799) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/app/_not-found/page.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/_not-found/page.js:2:9749)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:2:9799) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/chunks/fallback/pages/_app.js 500 in 66ms
+ GET /_next/static/chunks/fallback/pages/_error.js 500 in 66ms
+ ⨯ Error: Cannot find module './985.js'
+Require stack:
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/webpack-runtime.js
+- /Users/tylerwood/voice_of_customer/frontend/.next/server/app/_not-found/page.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/require.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/load-components.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/utils.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/options.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/swc/index.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/config.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/next.js
+- /Users/tylerwood/voice_of_customer/frontend/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/_not-found/page.js:2:9749)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:2:9799) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /env 500 in 44ms
+ ⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+   ▲ Next.js 15.4.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.248:3000
+   - Experiments (use with caution):
+     ⨯ missingSuspenseWithCSRBailout
+
+ ✓ Starting...
+ ⚠ Invalid next.config.ts options detected: 
+ ⚠     Unrecognized key(s) in object: 'missingSuspenseWithCSRBailout' at "experimental"
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+ ✓ Ready in 1547ms
+ ⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+   ▲ Next.js 15.4.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.248:3000
+
+ ✓ Starting...
+ ✓ Ready in 1340ms
+   Reload env: .env.local
+   Reload env: .env.local
