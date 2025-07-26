@@ -604,3 +604,6 @@ Require stack:
  GET /favicon.ico 500 in 228ms
  ✓ Compiled /feedback in 412ms (1526 modules)
  GET /feedback 200 in 534ms
+   Reload env: .env.local
+ ✓ Compiled in 524ms (1521 modules)
+ ✓ Compiled in 116ms (723 modules)
