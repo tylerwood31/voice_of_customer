@@ -3,9 +3,7 @@ import React, { useEffect, useState } from "react";
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; 
 import 'react-date-range/dist/theme/default.css';
-import DashboardCards from '@/components/DashboardCards';
-import FilteredIssues from '@/components/FilteredIssues';
-import AISummary from '@/components/AISummary';
+// Dashboard components removed for simplification - using inline components
 import ProtectedLayout from '@/components/ProtectedLayout';
 
 interface PulseData {
