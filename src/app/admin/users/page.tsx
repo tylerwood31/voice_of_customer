@@ -29,13 +29,20 @@ export default function UserManagementPage() {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/`, {
+        cache: 'no-store',
+        headers: {
+          'Cache-Control': 'no-cache',
+        },
+      });
       if (!response.ok) {
         throw new Error('Failed to fetch users');
       }
       const usersData = await response.json();
+      console.log('Fetched users:', usersData);
       setUsers(usersData);
     } catch (err) {
+      console.error('Error fetching users:', err);
       setError(err instanceof Error ? err.message : 'Failed to load users');
     } finally {
       setLoading(false);
@@ -90,10 +97,15 @@ export default function UserManagementPage() {
           throw new Error(errorData.detail || 'Failed to delete user');
         }
 
+        // Remove the user from the local state immediately for better UX
+        setUsers(users.filter(u => u.email !== email));
+        
         alert(`User ${email} deleted successfully`);
         
-        // Refresh the users list
-        fetchUsers();
+        // Then refresh from server to ensure consistency
+        setTimeout(() => {
+          fetchUsers();
+        }, 500);
       } catch (err) {
         alert(`Error deleting user: ${err instanceof Error ? err.message : 'Unknown error'}`);
       }
