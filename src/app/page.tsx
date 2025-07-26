@@ -11,7 +11,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="text-gray-500">Redirecting...</div>
+      <div className="text-gray-500">Redirecting to dashboard...</div>
     </div>
   );
 }
