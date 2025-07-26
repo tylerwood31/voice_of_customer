@@ -29,10 +29,14 @@ export default function UserManagementPage() {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/`, {
+      // Add timestamp to prevent caching issues
+      const timestamp = new Date().getTime();
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/?t=${timestamp}`, {
         cache: 'no-store',
         headers: {
-          'Cache-Control': 'no-cache',
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0',
         },
       });
       if (!response.ok) {
