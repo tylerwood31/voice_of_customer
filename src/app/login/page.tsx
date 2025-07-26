@@ -1,7 +1,6 @@
 "use client";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { authenticateUser } from '@/utils/auth';
 
 export default function LoginPage() {
@@ -35,12 +34,10 @@ export default function LoginPage() {
       <div className="max-w-md w-full space-y-8">
         <div>
           <div className="mx-auto h-20 w-auto flex justify-center">
-            <Image
+            <img
               src="/CoverWallet_Logo.png"
               alt="CoverWallet"
-              width={200}
-              height={80}
-              className="object-contain"
+              className="h-20 w-auto object-contain"
             />
           </div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
