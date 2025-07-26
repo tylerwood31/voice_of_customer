@@ -8,9 +8,3 @@
 [build.environment]
   NODE_VERSION = "18"
   NEXT_PUBLIC_API_URL = "https://voice-of-customer-backend.onrender.com"
-
-# Redirect all requests to index.html for SPA routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200

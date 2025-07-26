@@ -12,8 +12,17 @@ interface FeedbackRecord {
   priority: string;
   team: string;
   environment: string;
-  system_impacted: string;
+  area_impacted: string;
   created: string;
+  week: string;
+  issue_number: number;
+  status: string;
+  reporter_email: string;
+  slack_thread: string;
+  type_of_issue: string;
+  type_of_report: string;
+  source: string;
+  triage_rep: string;
 }
 
 export default function Feedback() {
@@ -25,6 +34,9 @@ export default function Feedback() {
   const [selectedEnvironment, setSelectedEnvironment] = useState("All Environments");
   const [selectedSystem, setSelectedSystem] = useState("All Systems");
   const [selectedTeam, setSelectedTeam] = useState("All Teams");
+  const [selectedPriority, setSelectedPriority] = useState("All Priorities");
+  const [selectedStatus, setSelectedStatus] = useState("All Statuses");
+  const [selectedSource, setSelectedSource] = useState("All Sources");
   const [startDate, setStartDate] = useState<Date>(new Date('2025-01-01'));
   const [endDate, setEndDate] = useState<Date>(new Date());
   const [hasInitialized, setHasInitialized] = useState(false);
@@ -92,7 +104,7 @@ export default function Feedback() {
   // Reset to page 1 when filters change
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedEnvironment, selectedSystem, selectedTeam, startDate, endDate]);
+  }, [selectedEnvironment, selectedSystem, selectedTeam, selectedPriority, selectedStatus, selectedSource, startDate, endDate]);
 
   useEffect(() => {
     async function fetchFeedback() {
@@ -120,7 +132,7 @@ export default function Feedback() {
           console.log(`🔥 FEEDBACK: Record ${idx + 1}:`, {
             id: record.id,
             environment: record.environment,
-            system_impacted: record.system_impacted
+            area_impacted: record.area_impacted
           });
         });
         setFeedback(data);
@@ -160,13 +172,16 @@ export default function Feedback() {
   };
 
   const allSystemValues = feedback
-    .map((f) => f.system_impacted)
+    .map((f) => f.area_impacted)
     .flatMap(parseSystemValue)
     .filter(sys => sys && sys !== "Unknown" && sys !== '""' && !sys.includes('""'));
   
   const environments = ["All Environments", ...new Set(feedback.map((f) => f.environment || "Unknown").filter(env => env && env.trim() !== "" && env !== "Unknown"))];
   const systems = ["All Systems", ...new Set(allSystemValues)];
   const teams = ["All Teams", ...new Set(feedback.map((f) => f.team || "Unassigned").filter(team => team && team.trim() !== "" && team !== "Unassigned"))];
+  const priorities = ["All Priorities", ...new Set(feedback.map((f) => f.priority || "Low").filter(p => p && p.trim() !== ""))];
+  const statuses = ["All Statuses", ...new Set(feedback.map((f) => f.status || "New").filter(s => s && s.trim() !== ""))];
+  const sources = ["All Sources", ...new Set(feedback.map((f) => f.source || "Unknown").filter(s => s && s.trim() !== "" && s !== "Unknown" && s !== "N/A"))];
   
   console.log("🔥 FINAL PARSED SYSTEMS (first 15):", systems.slice(0, 15));
   console.log("🔥 TOTAL SYSTEMS COUNT:", systems.length);
@@ -181,12 +196,15 @@ export default function Feedback() {
   const filteredFeedback = dateFilteredFeedback.filter((item) => {
     const teamMatch = selectedTeam === "All Teams" || (item.team || "Unassigned") === selectedTeam;
     const envMatch = selectedEnvironment === "All Environments" || (item.environment || "Unknown") === selectedEnvironment;
+    const priorityMatch = selectedPriority === "All Priorities" || (item.priority || "Low") === selectedPriority;
+    const statusMatch = selectedStatus === "All Statuses" || (item.status || "New") === selectedStatus;
+    const sourceMatch = selectedSource === "All Sources" || (item.source || "Unknown") === selectedSource;
     
     // For system filter, check if selected system is in the parsed array
     const sysMatch = selectedSystem === "All Systems" || 
-      parseSystemValue(item.system_impacted || "Unknown").includes(selectedSystem);
+      parseSystemValue(item.area_impacted || "Unknown").includes(selectedSystem);
     
-    return teamMatch && envMatch && sysMatch;
+    return teamMatch && envMatch && sysMatch && priorityMatch && statusMatch && sourceMatch;
   });
 
   // Sort chronologically (newest first)
@@ -271,6 +289,54 @@ export default function Feedback() {
           </select>
         </div>
 
+        {/* Priority Filter */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-600 mb-1">Priority</label>
+          <select
+            value={selectedPriority}
+            onChange={(e) => setSelectedPriority(e.target.value)}
+            className="border rounded px-2 py-1 text-sm"
+          >
+            {priorities.map((priority, idx) => (
+              <option key={idx} value={priority}>
+                {priority}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Status Filter */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-600 mb-1">Status</label>
+          <select
+            value={selectedStatus}
+            onChange={(e) => setSelectedStatus(e.target.value)}
+            className="border rounded px-2 py-1 text-sm"
+          >
+            {statuses.map((status, idx) => (
+              <option key={idx} value={status}>
+                {status}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Source Filter */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-600 mb-1">Source</label>
+          <select
+            value={selectedSource}
+            onChange={(e) => setSelectedSource(e.target.value)}
+            className="border rounded px-2 py-1 text-sm"
+          >
+            {sources.map((source, idx) => (
+              <option key={idx} value={source}>
+                {source}
+              </option>
+            ))}
+          </select>
+        </div>
+
         {/* Date Range Filter */}
         <div className="relative">
           <div>
@@ -340,10 +406,17 @@ export default function Feedback() {
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Issue #</th>
               <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Created</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Week</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Status</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Priority</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Team</th>
               <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Environment</th>
               <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">System Impacted</th>
-              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Team</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Source</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Type</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Triage Rep</th>
               <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">Details</th>
             </tr>
           </thead>
@@ -354,12 +427,36 @@ export default function Feedback() {
                 className="hover:bg-gray-50 cursor-pointer transition-colors"
                 onClick={() => router.push(`/feedback/${item.id}`)}
               >
+                <td className="px-4 py-2 text-sm text-gray-800 font-mono">{item.issue_number || "—"}</td>
                 <td className="px-4 py-2 text-sm text-gray-800">{formatDate(item.created)}</td>
-                <td className="px-4 py-2 text-sm text-gray-800">{item.environment || "Unknown"}</td>
-                <td className="px-4 py-2 text-sm text-gray-800">
-                  {parseSystemValue(item.system_impacted || "Unknown").join(", ") || "Unknown"}
+                <td className="px-4 py-2 text-sm text-gray-600">{item.week || "—"}</td>
+                <td className="px-4 py-2 text-sm">
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                    item.status === 'Done' ? 'bg-green-100 text-green-800' :
+                    item.status === 'To Do' ? 'bg-blue-100 text-blue-800' :
+                    item.status === 'In Progress' ? 'bg-yellow-100 text-yellow-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {item.status || "New"}
+                  </span>
+                </td>
+                <td className="px-4 py-2 text-sm">
+                  <span className={`px-2 py-1 rounded text-xs font-medium ${
+                    item.priority === 'High' ? 'bg-red-100 text-red-800' :
+                    item.priority === 'Medium' ? 'bg-orange-100 text-orange-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {item.priority || "Low"}
+                  </span>
                 </td>
                 <td className="px-4 py-2 text-sm text-gray-800">{item.team || "Unassigned"}</td>
+                <td className="px-4 py-2 text-sm text-gray-800">{item.environment || "Unknown"}</td>
+                <td className="px-4 py-2 text-sm text-gray-800">
+                  {parseSystemValue(item.area_impacted || "Unknown").join(", ") || "Unknown"}
+                </td>
+                <td className="px-4 py-2 text-sm text-gray-600">{item.source || "—"}</td>
+                <td className="px-4 py-2 text-sm text-gray-600">{item.type_of_report || "—"}</td>
+                <td className="px-4 py-2 text-sm text-gray-600">{item.triage_rep === "N/A" ? "—" : item.triage_rep || "—"}</td>
                 <td className="px-4 py-2 text-sm text-gray-800">
                   <div className="flex items-center justify-between">
                     <span 
@@ -377,7 +474,7 @@ export default function Feedback() {
             ))}
             {paginatedFeedback.length === 0 && sortedFeedback.length === 0 && (
               <tr>
-                <td colSpan={5} className="px-4 py-2 text-center text-sm text-gray-500">
+                <td colSpan={12} className="px-4 py-2 text-center text-sm text-gray-500">
                   No feedback found for the selected filters.
                 </td>
               </tr>

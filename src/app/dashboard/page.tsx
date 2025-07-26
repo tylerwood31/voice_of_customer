@@ -9,22 +9,17 @@ import AISummary from '@/components/AISummary';
 import ProtectedLayout from '@/components/ProtectedLayout';
 
 interface PulseData {
-  summary: {
-    total_feedback: number;
-    high_priority_count: number;
-    assignment_rate: number;
-    top_environment: [string, number];
-    top_system: [string, number];
-    top_team: [string, number];
+  total_feedback: number;
+  priority_distribution: { [key: string]: number };
+  environment_distribution: { [key: string]: number };
+  status_distribution: { [key: string]: number };
+  monthly_trends: {
+    data: [string, number][];
+    trend_percentage: number;
+    trend_direction: string;
   };
-  breakdowns: {
-    environments: Breakdown[];
-    systems_impacted: Breakdown[];
-    teams: Breakdown[];
-    priorities: Breakdown[];
-  };
-  recent_high_priority: RecentIssue[];
-  all_feedback: RecentIssue[];
+  high_priority_issues: RecentIssue[];
+  last_updated: string;
 }
 
 interface Breakdown {
@@ -35,10 +30,7 @@ interface Breakdown {
 interface RecentIssue {
   id: string;
   description: string;
-  priority: string;
   environment: string;
-  system: string;
-  team: string;
   created: string;
 }
 
@@ -126,26 +118,24 @@ export default function DashboardPage() {
   if (error) return <div className="p-8 text-red-500">Error: {error}</div>;
   if (!data) return <div className="p-8 text-gray-500">No data available</div>;
 
-  const { summary, breakdowns, recent_high_priority, all_feedback } = data;
+  const { total_feedback, priority_distribution, environment_distribution, status_distribution, high_priority_issues } = data;
 
-  // Get unique values for filters - sorted for consistency
-  const teams = [...new Set(all_feedback.map(f => f.team || "Unassigned"))].sort();
-  const environments = [...new Set(all_feedback.map(f => f.environment || "Unknown"))].sort();
+  // Get unique values for filters from the distributions
+  const environments = Object.keys(environment_distribution).sort();
   
-  // Apply filters for the issues list
-  const filteredData = all_feedback
+  // For now, just use the high priority issues as our filtered data
+  const filteredData = high_priority_issues
     .filter(item => {
-      const teamMatch = selectedTeam === "All Teams" || (item.team || "Unassigned") === selectedTeam;
       const envMatch = selectedEnvironment === "All Environments" || (item.environment || "Unknown") === selectedEnvironment;
       const itemDate = new Date(item.created);
       const dateMatch = itemDate >= startDate && itemDate <= endDate;
-      return teamMatch && envMatch && dateMatch;
+      return envMatch && dateMatch;
     })
-    .sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime()); // Sort descending by date
+    .sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime());
 
   // Debug logging
-  console.log("Selected filters:", { selectedTeam, selectedEnvironment, startDate, endDate });
-  console.log("Total data:", all_feedback.length, "Filtered data:", filteredData.length);
+  console.log("Selected filters:", { selectedEnvironment, startDate, endDate });
+  console.log("High priority issues:", high_priority_issues.length, "Filtered data:", filteredData.length);
 
   // Helper for checking if within last days
   const isWithinLastDays = (dateStr: string, days: number) => {
@@ -163,17 +153,6 @@ export default function DashboardPage() {
       <div className="space-y-4">
         <h1 className="text-2xl font-semibold">Customer Pulse</h1>
         <div className="flex flex-wrap gap-4">
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-600">Team:</label>
-            <select
-              value={selectedTeam}
-              onChange={(e) => setSelectedTeam(e.target.value)}
-              className="border p-2 rounded"
-            >
-              <option value="All Teams">All Teams</option>
-              {teams.map(team => <option key={team} value={team}>{team}</option>)}
-            </select>
-          </div>
           <div className="flex items-center gap-2">
             <label className="text-sm font-medium text-gray-600">Environment:</label>
             <select
@@ -246,31 +225,73 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Dashboard Cards Component */}
-      <DashboardCards 
-        allData={all_feedback}
-        selectedTeam={selectedTeam}
-        selectedEnvironment={selectedEnvironment}
-        startDate={startDate}
-        endDate={endDate}
-      />
+      {/* Summary Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="bg-white p-6 rounded-lg shadow">
+          <h3 className="text-sm font-medium text-gray-500">Total Feedback</h3>
+          <p className="text-2xl font-bold text-gray-900">{total_feedback.toLocaleString()}</p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow">
+          <h3 className="text-sm font-medium text-gray-500">High Priority</h3>
+          <p className="text-2xl font-bold text-red-600">{priority_distribution.High || 0}</p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow">
+          <h3 className="text-sm font-medium text-gray-500">In Progress</h3>
+          <p className="text-2xl font-bold text-yellow-600">{status_distribution["In Progress"] || 0}</p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow">
+          <h3 className="text-sm font-medium text-gray-500">Completed</h3>
+          <p className="text-2xl font-bold text-green-600">{status_distribution.Done || 0}</p>
+        </div>
+      </div>
 
-      {/* AI Summary Section */}
-      <AISummary filteredData={filteredData} />
+      {/* Environment Distribution */}
+      <div className="bg-white p-6 rounded-lg shadow">
+        <h3 className="text-lg font-medium mb-4">Environment Distribution</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {Object.entries(environment_distribution)
+            .sort(([,a], [,b]) => b - a)
+            .map(([env, count]) => (
+            <div key={env} className="text-center">
+              <p className="text-sm text-gray-500">{env}</p>
+              <p className="text-lg font-semibold">{count}</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
-      {/* Filtered Issues Section */}
+      {/* High Priority Issues */}
       <div>
         <h2 className="text-xl font-medium mb-4">
-          Filtered Issues
+          High Priority Issues
           <span className="text-sm font-normal text-gray-500 ml-2">
             ({filteredData.length} results)
           </span>
         </h2>
-        <FilteredIssues 
-          filteredData={filteredData}
-          isWithinLastDays={isWithinLastDays}
-          fromDashboard={true}
-        />
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="divide-y divide-gray-200">
+            {filteredData.slice(0, 10).map((issue) => (
+              <div key={issue.id} className="p-4 hover:bg-gray-50">
+                <div className="flex justify-between items-start">
+                  <div className="flex-1">
+                    <p className="text-sm text-gray-600 mb-1">{issue.environment}</p>
+                    <p className="text-sm text-gray-900 line-clamp-3">{issue.description}</p>
+                  </div>
+                  <div className="ml-4 text-right">
+                    <p className="text-xs text-gray-500">
+                      {new Date(issue.created).toLocaleDateString()}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+            {filteredData.length === 0 && (
+              <div className="p-8 text-center text-gray-500">
+                No high priority issues found for the selected filters.
+              </div>
+            )}
+          </div>
+        </div>
       </div>
       </div>
     </ProtectedLayout>
